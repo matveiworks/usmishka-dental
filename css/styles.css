@@ -240,10 +240,21 @@ img { max-width: 100%; display: block; }
 
 .hero-visual {
   position: relative;
-  min-height: 320px;
+  min-height: 420px;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
 }
 
 .hero-card {
+  position: absolute;
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
@@ -251,7 +262,9 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-card-quote {
-  max-width: 320px;
+  top: 24px;
+  left: -24px;
+  max-width: 300px;
 }
 .hero-card-quote p {
   color: var(--gray-800);
@@ -265,9 +278,8 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-card-badge {
-  position: absolute;
   bottom: -18px;
-  right: 12px;
+  right: -16px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -287,6 +299,27 @@ img { max-width: 100%; display: block; }
 }
 .hero-card-badge strong { display: block; color: var(--navy); font-size: 0.92rem; }
 .hero-card-badge span { font-size: 0.8rem; color: var(--gray-600); }
+
+/* ---------- About band ---------- */
+.about-band { padding: 0 0 88px; }
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.about-text h2 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
+.about-text p:last-child { margin-bottom: 0; }
 
 /* ---------- Trust strip ---------- */
 .trust-strip {
@@ -571,7 +604,11 @@ img { max-width: 100%; display: block; }
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { min-height: 220px; margin-top: 20px; }
+  .hero-visual { min-height: 300px; margin-top: 48px; }
+  .hero-card-quote { left: 0; }
+  .hero-card-badge { right: 0; }
+  .about-inner { grid-template-columns: 1fr; }
+  .about-photo { height: 260px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .doctors-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
@@ -603,4 +640,6 @@ img { max-width: 100%; display: block; }
   .trust-inner { justify-content: flex-start; }
   .hero { padding: 56px 0 48px; }
   .section { padding: 60px 0; }
+
+  .site-footer .container { padding-left: 36px; padding-right: 36px; }
 }
