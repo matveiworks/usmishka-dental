@@ -455,10 +455,14 @@ img { max-width: 100%; display: block; }
 }
 
 .tooth-services { top: -8px; right: -160px; width: 58px; height: 58px; transform: rotate(-18deg); }
-.tooth-about { bottom: 6px; right: -18px; width: 74px; height: 74px; transform: rotate(12deg); }
+.tooth-services-2 { top: 40px; left: -148px; width: 40px; height: 40px; transform: rotate(24deg); opacity: 0.11; }
+.tooth-about { bottom: 6px; right: 6px; width: 74px; height: 74px; transform: rotate(12deg); }
 .tooth-gallery { top: 0; left: -160px; width: 54px; height: 54px; transform: rotate(22deg); }
+.tooth-gallery-2 { bottom: -6px; right: -140px; width: 44px; height: 44px; transform: rotate(-16deg); opacity: 0.11; }
 .tooth-doctors { top: -10px; left: -150px; width: 60px; height: 60px; transform: rotate(-14deg); }
+.tooth-doctors-2 { top: 24px; right: -140px; width: 42px; height: 42px; transform: rotate(18deg); opacity: 0.11; }
 .tooth-reviews { top: -6px; right: -150px; width: 56px; height: 56px; transform: rotate(-9deg); }
+.tooth-reviews-2 { top: 34px; left: -140px; width: 40px; height: 40px; transform: rotate(20deg); opacity: 0.11; }
 
 @media (max-width: 1180px) {
   .deco-tooth { display: none; }
